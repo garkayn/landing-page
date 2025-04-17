@@ -1,18 +1,14 @@
 export const roadmapItems = [
     {
-      title: "Define Features & Audience",
-      description: "Outline your SaaS product's key features and target audience.",
+      title: "Validar interés y recaudar fondos",
+      description: "Define your SaaS product’s key features and audience.",
     },
     {
-      title: "Generate Design",
-      description: "Get a fully designed landing page instantly.",
+      title: "MVP de la red social y criptomoneda",
+      description: "Lovable generates a fully designed landing page instantly.",
     },
     {
-      title: "Customize Content",
-      description: "Tailor messaging, visuals, and call-to-action elements.",
-    },
-    {
-      title: "Publish & Convert",
-      description: "Launch and start converting visitors effortlessly.",
+      title: "Expansión global y lanzamiento del juego",
+      description: "Customize messaging, visuals, and call-to-action elements.",
     },
   ];
