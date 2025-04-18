@@ -1,11 +1,18 @@
-import Roadmap from "../../components/Roadmap";
-import { roadmapItems } from "../../data/roadmapItems";
+import Header from "../components/Header/header";
+import Hero from "../components/Hero/hero";
+import Solution from "../components/Solution/solution"
+import Roadmap from "../components/Roadmap/roadmap";
+import { roadmapItems } from "../data/roadmapItems";
+
 
 export default function Home() {
   return (
-    <main>
-      {/* Otras secciones (Hero, Navbar, etc.) */}
-      <Roadmap items={roadmapItems} />
+    <main className="absolute top-0 left-0 w-full h-full object-cover">
+      <Header />
+      <Hero />
+      <Solution />
+      <Roadmap />
     </main>
+    
   );
 }
