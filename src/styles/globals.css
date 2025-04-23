@@ -20,7 +20,7 @@ body {
   background: linear-gradient(
     135deg,
     hsl(240, 10%, 15%) 0%,      /* slate-900 aproximado */
-    hsl(256, 73%, 16%) 50%,     /* purple-900 aproximado */
+    hsl(256, 71%, 18%) 50%,     /* purple-900 aproximado */
     hsl(240, 10%, 15%) 100%     /* slate-900 */
   );
   color: var(--foreground);

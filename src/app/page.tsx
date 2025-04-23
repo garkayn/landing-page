@@ -2,7 +2,7 @@ import Header from "../components/Header/header";
 import Hero from "../components/Hero/hero";
 import Solution from "../components/Solution/solution"
 import Roadmap from "../components/Roadmap/roadmap";
-import { roadmapItems } from "../data/roadmapItems";
+import Footer  from "../components/Footer/footer";
 
 
 export default function Home() {
@@ -12,6 +12,7 @@ export default function Home() {
       <Hero />
       <Solution />
       <Roadmap />
+      <Footer />
     </main>
     
   );
