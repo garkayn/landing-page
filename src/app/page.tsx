@@ -1,8 +1,8 @@
-import Header from "../components/Header/header";
-import Hero from "../components/Hero/hero";
-import Solution from "../components/Solution/solution"
+import Header from "../components/header";
+import Hero from "../components/hero";
+import Solution from "../components/solution"
 import Roadmap from "../components/Roadmap/roadmap";
-import Footer  from "../components/Footer/footer";
+import Footer  from "../components/footer";
 
 
 export default function Home() {
