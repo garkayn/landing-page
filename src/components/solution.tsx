@@ -6,8 +6,8 @@ const SolutionSection = () => {
     <section id="solution" className="py-20 bg-black text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
-            Revolucionando el Acceso al Espacio
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            Revolucionando el <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">acceso</span> al espacio
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Combinamos tecnología blockchain, gamificación y comunidad para crear el primer ecosistema espacial descentralizado
