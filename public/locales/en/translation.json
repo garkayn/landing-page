@@ -1,0 +1,108 @@
+{
+    "en": "English",
+    "es": "Spanish",
+    "header": {
+        "solution": "Solution",
+        "roadmap": "Roadmap",
+        "contact": "Contact",
+        "support": "Support Us",
+        "newsletter": "Newsletter"
+    },
+    "hero": {
+        "Intro": "Today, space travel is complicated and exclusive.",
+        "Highlight": "We want to democratize it",
+        "Title": "Get ready to go beyond!"
+    },
+    "footer": {
+        "navigation": "Navigation",
+        "hero": "Hero",
+        "solution": "Solution",
+        "roadmap": "Roadmap",
+        "contact": "Contact",
+        "email": "contact@yourbrand.com",
+        "address": "123 Fake Street, City",
+        "newsletter": "Newsletter",
+        "emailPlaceholder": "Your email",
+        "subscribe": "Subscribe",
+        "companyName": "Orion"
+    },
+    "solution": {
+        "title": "Revolutionizing",
+        "highlight": "space access",
+        "subtitle": "We combine blockchain technology, gamification and community to create the first decentralized space ecosystem",
+        "cards": {
+            "community": {
+                "title": "Global Community",
+                "description": "Connect with astronauts, aerospace engineers and enthusiasts on our space-dedicated social platform.",
+                "features": [
+                "Specialized technical forums",
+                "Live events with experts",
+                "Collaboration network"
+                ]
+            },
+            "experience": {
+                "title": "Immersive Experience",
+                "description": "Explore the universe in our videogame. Build bases, participate in missions and earn rewards.",
+                "features": [
+                "Space metaverse",
+                "Play-to-earn economy",
+                "Exclusive events"
+                ]
+            },
+            "currency": {
+                "title": "Native Currency",
+                "description": "Tokenization of space projects through blockchain. Invest, participate and benefit from the new space market.",
+                "features": [
+                "NFTs for in-game planetary spaces",
+                "Reward staking",
+                "Support space-related projects"
+                ]
+            }
+        }
+    },
+    "roadmap": {
+        "title": "Our",
+        "highlight": "roadmap",
+        "subtitle": "The path that will lead us to revolutionize access to space through decentralized technology",
+        "inProgress": "IN PROGRESS",
+        "phases": {
+            "phase1": {
+                "title": "Community Building",
+                "duration": "Q1 2025 - Q3 2025",
+                "objective": "Establish a community interested in space exploration",
+                "actions": [
+                    "Create communities on Reddit and X",
+                    "Present future ideas",
+                    "Obtain initial funding",
+                    "Build MVP of space-focused social network",
+                    "Partner with space organizations"
+                ]
+            },
+            "phase2": {
+                "title": "Space Metaverse Development",
+                "duration": "Q1 2026 - Q3 2027",
+                "objective": "Gamification of the space experience",
+                "actions": [
+                    "Prototype space-focused game",
+                    "Sell in-game land NFTs",
+                    "Integrate virtual reality"
+                ]
+            },
+            "phase3": {
+                "title": "Cryptocurrency Launch",
+                "duration": "Q1 2028 - Q3 2028",
+                "objective": "Global expansion and systems based on our cryptocurrency",
+                "actions": [
+                    "Public token launch",
+                    "Integrate cryptocurrency into the game",
+                    "Create support projects for research in related areas"
+                ]
+            }
+        },
+        "status": {
+            "completed": "COMPLETED",
+            "current": "CURRENT",
+            "upcoming": "UPCOMING"
+        }
+    }
+}
