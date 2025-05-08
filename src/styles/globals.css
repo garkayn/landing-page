@@ -45,3 +45,16 @@ body {
 video {
   filter: brightness(0.8) contrast(1.2);
 }
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #424242 transparent;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
