@@ -1,108 +1,107 @@
 {
-    "en": "Inglés",
-    "es": "Español",
-    "header": {
-        "solution": "Solución",
-        "roadmap": "Hoja de ruta",
-        "contact": "Contacto",
-        "support": "Apóyanos",
-        "newsletter": "Newsletter"
-    },
-    "content": {
-        "heroIntro": "Hoy viajar al espacio es complicado y exclusivo.",
-        "heroHighlight": "Queremos democratizarlo",
-        "heroTitle": "¡Prepárate para viajar más allá!"
-    },
-    "footer": {
-        "navigation": "Navegación",
-        "hero": "Inicio",
-        "solution": "Solución",
-        "roadmap": "Hoja de ruta",
-        "contact": "Contacto",
-        "email": "contacto@tumarca.com",
-        "address": "Calle Falsa 123, Ciudad",
-        "newsletter": "Newsletter",
-        "emailPlaceholder": "Tu email",
-        "subscribe": "Suscribirse",
-        "companyName": "Orión"
-    },
-    "solution": {
-      "title": "Revolucionando el",
-      "highlight": "acceso al espacio",
-      "subtitle": "Combinamos tecnología blockchain, gamificación y comunidad para crear el primer ecosistema espacial descentralizado",
-      "cards": {
-        "community": {
-          "title": "Comunidad Global",
-          "description": "Conecta con astronautas, ingenieros aeroespaciales y entusiastas en nuestra plataforma social dedicada al espacio.",
-          "features": [
-            "Foros técnicos especializados",
-            "Eventos en vivo con expertos",
-            "Red de colaboración"
-          ]
-        },
-        "experience": {
-          "title": "Experiencia Inmersiva",
-          "description": "Explora el universo en nuestro videojuego. Construye bases, participa en misiones y gana recompensas.",
-          "features": [
-            "Metaverso espacial",
-            "Economía play-to-earn",
-            "Eventos exclusivos"
-          ]
-        },
-        "currency": {
-          "title": "Moneda propia",
-          "description": "Tokenización de proyectos espaciales mediante blockchain. Invierte, participa y benefíciate del nuevo mercado espacial.",
-          "features": [
-            "NFT de espacios en planetas del juego",
-            "Staking de recompensas",
-            "Apoyar proyectos relacionados al espacio"
-          ]
-        }
+  "en": "Inglés",
+  "es": "Español",
+  "header": {
+      "solution": "Solución",
+      "roadmap": "Hoja de ruta",
+      "contact": "Contacto",
+      "support": "Apóyanos",
+      "newsletter": "Newsletter"
+  },
+  "hero": {
+      "Intro": "Hoy viajar al espacio es complicado y exclusivo. Queremos democratizarlo",
+      "Title": "¡Prepárate para viajar más allá!"
+  },
+  "solution": {
+    "title": "Revolucionando el",
+    "highlight": "acceso al espacio",
+    "subtitle": "Combinamos tecnología blockchain, gamificación y comunidad para crear el primer ecosistema espacial descentralizado",
+    "cards": {
+      "community": {
+        "title": "Comunidad Global",
+        "description": "Conecta con astronautas, ingenieros aeroespaciales y entusiastas en nuestra plataforma social dedicada al espacio.",
+        "features": [
+          "Foros técnicos especializados",
+          "Eventos en vivo con expertos",
+          "Red de colaboración"
+        ]
+      },
+      "experience": {
+        "title": "Experiencia Inmersiva",
+        "description": "Explora el universo en nuestro videojuego. Construye bases, participa en misiones y gana recompensas.",
+        "features": [
+          "Metaverso espacial",
+          "Economía play-to-earn",
+          "Eventos exclusivos"
+        ]
+      },
+      "currency": {
+        "title": "Moneda propia",
+        "description": "Tokenización de proyectos espaciales mediante blockchain. Invierte, participa y benefíciate del nuevo mercado espacial.",
+        "features": [
+          "NFT de espacios en planetas del juego",
+          "Staking de recompensas",
+          "Apoyar proyectos relacionados al espacio"
+        ]
       }
-    },
-    "roadmap": {
-        "title": "Nuestra",
-        "highlight": "hoja de ruta",
-        "subtitle": "El camino que nos llevará a revolucionar el acceso al espacio mediante tecnología descentralizada",
-        "inProgress": "EN PROGRESO",
-        "phases": {
-        "phase1": {
-            "title": "Creación de comunidad",
-            "duration": "Q1 2025 - Q3 2025",
-            "objective": "Establecer una comunidad interesada en la exploración espacial",
-            "actions": [
-              "Crear comunidades en reddit y X",
-              "Presentar ideas para el futuro",
-              "Obtener financiación inicial",
-              "Construir MVP de red social enfocada en el espacio",
-              "Asociarse con organizaciones espaciales"
-            ]
-        },
-        "phase2": {
-            "title": "Desarrollo de metaverso espacial",
-            "duration": "Q1 2026 - Q3 2027",
-            "objective": "Gamificación de la experiencia espacial",
-            "actions": [
-              "Prototipo del juego enfocado en el espacio",
-              "Venta de NFTs de terrenos dentro del juego",
-              "Integración de realidad virtual"
-            ]
-        },
-        "phase3": {
-            "title": "Lanzamiento de criptomoneda",
-            "duration": "Q1 2028 - Q3 2028",
-            "objective": "Expansión global y sistemas basados en nuestra criptomoneda",
-            "actions": [
-              "Lanzamiento público de token",
-              "Incorporar criptomoneda al juego",
-              "Crear proyectos de apoyo para investigación en áreas afines"
-            ]
-        }
-        },
-        "status": {
+    }
+  },
+  "roadmap": {
+      "title": "Nuestra",
+      "highlight": "hoja de ruta",
+      "subtitle": "El camino que nos llevará a revolucionar el acceso al espacio mediante tecnología descentralizada",
+      "inProgress": "EN PROGRESO",
+      "phases": {
+      "phase1": {
+          "title": "Creación de comunidad",
+          "duration": "Q1 2025 - Q3 2025",
+          "objective": "Establecer una comunidad interesada en la exploración espacial",
+          "actions": [
+            "Crear comunidades en reddit y X",
+            "Presentar ideas para el futuro",
+            "Obtener financiación inicial",
+            "Construir MVP de red social enfocada en el espacio",
+            "Asociarse con organizaciones espaciales"
+          ]
+      },
+      "phase2": {
+          "title": "Desarrollo de metaverso espacial",
+          "duration": "Q1 2026 - Q3 2027",
+          "objective": "Gamificación de la experiencia espacial",
+          "actions": [
+            "Prototipo del juego enfocado en el espacio",
+            "Venta de NFTs de terrenos dentro del juego",
+            "Integración de realidad virtual"
+          ]
+      },
+      "phase3": {
+          "title": "Lanzamiento de criptomoneda",
+          "duration": "Q1 2028 - Q3 2028",
+          "objective": "Expansión global y sistemas basados en nuestra criptomoneda",
+          "actions": [
+            "Lanzamiento público de token",
+            "Incorporar criptomoneda al juego",
+            "Crear proyectos de apoyo para investigación en áreas afines"
+          ]
+      }
+      },
+      "status": {
         "completed": "COMPLETADO",
         "current": "ACTUAL",
         "upcoming": "PRÓXIMO"
-        }
-    }
+      }
+  },
+  "footer": {
+    "navigation": "Navegación",
+    "hero": "Inicio",
+    "solution": "Solución",
+    "roadmap": "Hoja de ruta",
+    "contact": "Contacto",
+    "email": "contacto@tumarca.com",
+    "address": "Calle Falsa 123, Ciudad",
+    "newsletter": "Newsletter",
+    "emailPlaceholder": "Tu email",
+    "subscribe": "Suscribirse",
+    "companyName": "Orión"
+  }
 }  

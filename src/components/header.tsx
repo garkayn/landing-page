@@ -3,16 +3,23 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTranslation } from 'react-i18next';
+import { TbWorld } from "react-icons/tb";
 
 const Header = () => {
   const [opacity, setOpacity] = useState(1);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const { t } = useTranslation();
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setLanguageMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       if (currentScrollY > 100) {
         if (currentScrollY > lastScrollY) {
           setOpacity(Math.max(0, opacity - 0.05));
@@ -22,19 +29,20 @@ const Header = () => {
       } else {
         setOpacity(1);
       }
+
       setLastScrollY(currentScrollY);
     };
 
     const throttledScroll = throttle(handleScroll, 100);
     window.addEventListener("scroll", throttledScroll, { passive: true });
-    
+
     return () => window.removeEventListener("scroll", throttledScroll);
   }, [lastScrollY, opacity]);
 
   return (
     <header
       className="fixed top-0 w-full z-50 transition-opacity duration-300 border-b border-gray-800/50"
-      style={{ 
+      style={{
         opacity: opacity,
         background: 'rgba(0, 0, 0, 0.5)',
         backdropFilter: 'blur(12px)',
@@ -42,9 +50,9 @@ const Header = () => {
       }}
     >
       <div className="container mx-auto px-6 flex justify-between items-center py-3">
-        <img 
-          src="/favicon.ico" 
-          alt="Logo" 
+        <img
+          src="/favicon.ico"
+          alt="Logo"
           className="h-8 w-8 transition-transform"
         />
 
@@ -60,7 +68,7 @@ const Header = () => {
           </Link>
         </nav>
 
-        <div className="flex items-center space-x-3">
+        <div className="relative flex items-center space-x-3">
           <Link
             href="#kickstarter"
             className="font-bold px-4 py-2 rounded-full text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform opacity-80 hover:opacity-100 text-sm"
@@ -73,6 +81,31 @@ const Header = () => {
           >
             {t('header.newsletter')}
           </Link>
+
+          {/* Language Selector */}
+          <button
+            onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
+            className="relative text-white text-xl hover:text-gray-300"
+          >
+            <TbWorld />
+          </button>
+
+          {languageMenuOpen && (
+            <div className="absolute right-0 top-10 mt-2 bg-black bg-opacity-80 backdrop-blur-md rounded-md shadow-lg text-sm text-white z-50">
+              <button
+                onClick={() => i18n.changeLanguage('en')}
+                className="block w-full text-left px-4 py-2 hover:bg-gray-700"
+              >
+                English
+              </button>
+              <button
+                onClick={() => i18n.changeLanguage('es')}
+                className="block w-full text-left px-4 py-2 hover:bg-gray-700"
+              >
+                Español
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </header>
