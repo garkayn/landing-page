@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6" id="footer">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Columna 1: Logo y descripción */}
           <div>
             <img src="/favicon.ico" alt="Logo" className="h-10 w-10 mr-4" />
@@ -44,15 +44,6 @@ const Footer = () => {
                   {t('footer.roadmap')}
                 </Link>
               </li>
-            </ul>
-          </div>
-          
-          {/* Columna 3: Contacto */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t('footer.contact')}</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>{t('footer.email')}</li>
-              <li>{t('footer.address')}</li>
             </ul>
           </div>
           

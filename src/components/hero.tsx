@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="relative h-full flex flex-col justify-end pb-20 md:pb-28 lg:pb-36 px-8 md:px-12 lg:px-16 text-left">
         <div className="mb-8 max-w-2xl">
           <p className="text-xl md:text-2xl text-gray-300 mb-4 font-light">
-            {t('hero.Intro')} <span className="text-white font-medium">{t('hero.Highlight')}</span>
+            {t('hero.Intro')}
           </p>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
@@ -37,18 +37,8 @@ const Hero = () => {
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <div className="animate-bounce flex flex-col items-center">
-            <svg 
-              className="w-6 h-6 text-white opacity-80" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth="2" 
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
+            <svg width="30px" height="20px" aria-label="more content below">
+              <path stroke="#ffffff" stroke-width="2px" d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "></path>
             </svg>
           </div>
         </div>

@@ -9,22 +9,8 @@
         "newsletter": "Newsletter"
     },
     "hero": {
-        "Intro": "Today, space travel is complicated and exclusive.",
-        "Highlight": "We want to democratize it",
+        "Intro": "Today, space travel is complicated and exclusive. We want to democratize it",
         "Title": "Get ready to go beyond!"
-    },
-    "footer": {
-        "navigation": "Navigation",
-        "hero": "Hero",
-        "solution": "Solution",
-        "roadmap": "Roadmap",
-        "contact": "Contact",
-        "email": "contact@yourbrand.com",
-        "address": "123 Fake Street, City",
-        "newsletter": "Newsletter",
-        "emailPlaceholder": "Your email",
-        "subscribe": "Subscribe",
-        "companyName": "Orion"
     },
     "solution": {
         "title": "Revolutionizing",
@@ -104,5 +90,18 @@
             "current": "CURRENT",
             "upcoming": "UPCOMING"
         }
+    },
+    "footer": {
+        "navigation": "Navigation",
+        "hero": "Hero",
+        "solution": "Solution",
+        "roadmap": "Roadmap",
+        "contact": "Contact",
+        "email": "contact@yourbrand.com",
+        "address": "123 Fake Street, City",
+        "newsletter": "Newsletter",
+        "emailPlaceholder": "Your email",
+        "subscribe": "Subscribe",
+        "companyName": "Orion"
     }
 }
