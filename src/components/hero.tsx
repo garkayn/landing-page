@@ -38,7 +38,7 @@ const Hero = () => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <div className="animate-bounce flex flex-col items-center">
             <svg width="30px" height="20px" aria-label="more content below">
-              <path stroke="#ffffff" stroke-width="2px" d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "></path>
+              <path stroke="#ffffff" strokeWidth="2px" d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "></path>
             </svg>
           </div>
         </div>

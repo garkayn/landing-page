@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { useTranslation } from 'react-i18next';
 import { TbWorld } from "react-icons/tb";
@@ -16,28 +16,47 @@ const Header = () => {
     setLanguageMenuOpen(false);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 100) {
-        if (currentScrollY > lastScrollY) {
-          setOpacity(Math.max(0, opacity - 0.05));
-        } else {
-          setOpacity(Math.min(1, opacity + 0.1));
-        }
+  const handleScroll = useCallback(() => {
+    const currentScrollY = window.scrollY;
+    const scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+    
+    // Solo comienza a desvanecer después de 100px de scroll
+    if (currentScrollY > 100) {
+      if (scrollDirection === 'down') {
+        // Desvanecer al bajar (más rápido)
+        setOpacity(prev => Math.max(0, prev - 0.1));
       } else {
-        setOpacity(1);
+        // Aparecer al subir (un poco más lento para mejor UX)
+        setOpacity(prev => Math.min(1, prev + 0.08));
       }
+    } else {
+      // Mostrar completamente cuando está cerca del top
+      setOpacity(1);
+    }
 
-      setLastScrollY(currentScrollY);
+    setLastScrollY(currentScrollY);
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    // Usamos requestAnimationFrame para mejor rendimiento
+    let animationFrameId: number;
+    
+    const throttledScroll = () => {
+      if (!animationFrameId) {
+        animationFrameId = requestAnimationFrame(() => {
+          handleScroll();
+          animationFrameId = 0;
+        });
+      }
     };
 
-    const throttledScroll = throttle(handleScroll, 100);
-    window.addEventListener("scroll", throttledScroll, { passive: true });
-
-    return () => window.removeEventListener("scroll", throttledScroll);
-  }, [lastScrollY, opacity]);
+    window.addEventListener('scroll', throttledScroll, { passive: true });
+    
+    return () => {
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('scroll', throttledScroll);
+    };
+  }, [handleScroll]);
 
   return (
     <header
@@ -46,7 +65,8 @@ const Header = () => {
         opacity: opacity,
         background: 'rgba(0, 0, 0, 0.5)',
         backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)'
+        WebkitBackdropFilter: 'blur(12px)',
+        transition: 'opacity 0.3s ease-in-out' // Transición más suave
       }}
     >
       <div className="container mx-auto px-6 flex justify-between items-center py-3">
@@ -83,44 +103,36 @@ const Header = () => {
           </Link>
 
           {/* Language Selector */}
-          <button
-            onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
-            className="relative text-white text-xl hover:text-gray-300"
+          <div 
+            className="relative group"
+            onMouseEnter={() => setLanguageMenuOpen(true)}
+            onMouseLeave={() => setLanguageMenuOpen(false)}
           >
-            <TbWorld />
-          </button>
-
-          {languageMenuOpen && (
-            <div className="absolute right-0 top-10 mt-2 bg-black bg-opacity-80 backdrop-blur-md rounded-md shadow-lg text-sm text-white z-50">
-              <button
-                onClick={() => i18n.changeLanguage('en')}
-                className="block w-full text-left px-4 py-2 hover:bg-gray-700"
+            <button
+              onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
+              className="p-2 rounded-full hover:bg-gray-700 transition-colors text-white text-xl flex items-center"
+            >
+              <TbWorld />
+            </button>
+            {languageMenuOpen && (
+              <div 
+                className="absolute left-0 mt-0 w-13 bg-gray-800 bg-opacity-90 backdrop-blur-md text-white rounded-lg shadow-lg z-50"
               >
-                English
-              </button>
-              <button
-                onClick={() => i18n.changeLanguage('es')}
-                className="block w-full text-left px-4 py-2 hover:bg-gray-700"
-              >
-                Español
-              </button>
-            </div>
-          )}
+                <ul className="py-2">
+                  <li className="px-4 py-2 hover:bg-gray-700 cursor-pointer flex items-center space-x-2" onClick={() => changeLanguage('en')}>            
+                    <span><img src="/en.svg" alt="en" className="w-5 h-5" /></span>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-700 cursor-pointer flex items-center space-x-2" onClick={() => changeLanguage('es')}>
+                    <span><img src="/es.svg" alt="es" className="w-5 h-5" /></span>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </header>
   );
 };
-
-function throttle(fn: (...args: any[]) => void, wait: number) {
-  let lastTime = 0;
-  return (...args: any[]) => {
-    const now = Date.now();
-    if (now - lastTime >= wait) {
-      fn(...args);
-      lastTime = now;
-    }
-  };
-}
 
 export default Header;
