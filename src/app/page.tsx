@@ -8,7 +8,7 @@ import I18nProviderWrapper from "./i18n-provider"; // ajusta la ruta si es neces
 export default function Home() {
   return (
     <I18nProviderWrapper>
-      <main className="absolute top-0 left-0 w-full h-full object-cover overflow-y-scroll scrollbar">
+      <main className="absolute top-0 left-0 w-full h-full object-cover scrollbar">
         <Header />
         <Hero />
         <Solution />
